@@ -118,8 +118,8 @@ router.get('/search', search.index);
 
 if (!config.debug) { // 这个兼容破坏了不少测试
 	router.get('/:name', function (req, res) {
-	  res.redirect('/user/' + req.params.name)
-	})
+	  res.redirect('/user/' + req.params.name);
+	});
 }
 
 

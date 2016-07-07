@@ -3,22 +3,24 @@
  */
 
 /**
- * Module dependencies.
+ * Module dependencies.模块依赖
  */
 
-var config = require('./config');
+var config = require('./config');//加载配置
 
 if (!config.debug && config.oneapm_key) {
   require('oneapm');
 }
 
-require('colors');
-var path = require('path');
-var Loader = require('loader');
-var LoaderConnect = require('loader-connect');
-var express = require('express');
-var session = require('express-session');
-var passport = require('passport');
+require('colors');//终端字体颜色-3
+var path = require('path');//文件系统路径
+var Loader = require('loader');//Node静态资源加载器
+var LoaderConnect = require('loader-connect');//Loader Connect是一个适配Connect/Express的静态资源加载器，它基于静态文件的文件扩展名来对源文件进行编译。
+
+var express = require('express');//Express框架
+var session = require('express-session');//Express配置session中间件
+
+var passport = require('passport');//
 require('./middlewares/mongoose_log'); // 打印 mongodb 查询日志
 require('./models');
 var GitHubStrategy = require('passport-github').Strategy;
