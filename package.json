@@ -6,7 +6,7 @@
   "description": "A Node.js bbs using MongoDB",
   "repository": "https://github.com/cnodejs/nodeclub",
   "engines": {
-    "node": "0.12.x"
+    "node": "4.4.6"
   },
   "dependencies": {
     "async": "1.5.2",
