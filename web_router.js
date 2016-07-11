@@ -8,14 +8,15 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var sign = require('./controllers/sign');
-var site = require('./controllers/site');
-var user = require('./controllers/user');
-var message = require('./controllers/message');
-var topic = require('./controllers/topic');
-var reply = require('./controllers/reply');
-var rss = require('./controllers/rss');
+//对于controllers内部的每个文件
+var express = require('express');//express模块
+var sign = require('./controllers/sign');//注册
+var site = require('./controllers/site');//?网站index 控制？？
+var user = require('./controllers/user');//？用户的？？
+var message = require('./controllers/message');//用户信息？？
+var topic = require('./controllers/topic');//主题
+var reply = require('./controllers/reply');//回复
+var rss = require('./controllers/rss');//RSS
 var staticController = require('./controllers/static');
 var auth = require('./middlewares/auth');
 var limit = require('./middlewares/limit');
@@ -27,7 +28,7 @@ var config = require('./config');
 
 var router = express.Router();
 
-// home page
+// home page 首页
 router.get('/', site.index);
 // sitemap
 router.get('/sitemap.xml', site.sitemap);
