@@ -1,4 +1,4 @@
-var EventProxy = require('eventproxy');
+var EventProxy = require('eventproxy');//国人自己做的异步
 var models     = require('../models');
 var Topic      = models.Topic;
 var User       = require('./user');
